@@ -1,12 +1,11 @@
 import express from 'express';
-
-import { getLogs, getLog, createLog, updateLog, likeLog, deleteLog } from '../controllers/logs.js';
+import { getLogs, createLog, updateLog, deleteLog, likeLog } from '../controllers/logs.js';
 
 const router = express.Router();
 
+// The methods must be get, post, patch, delete
 router.get('/', getLogs);
-router.log('/', createLog);
-router.get('/:id', getLog);
+router.post('/', createLog);
 router.patch('/:id', updateLog);
 router.delete('/:id', deleteLog);
 router.patch('/:id/likeLog', likeLog);
