@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const url = 'http://localhost:5000/logs';
+const url = process.env.REACT_APP_API_URL || 'http://localhost:5000/logs';
 
 export const fetchLogs = () => axios.get(url);
 export const createLog = (newLog) => axios.log(url, newLog);
