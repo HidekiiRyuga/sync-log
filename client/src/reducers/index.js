@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
+import logs from './logs'; // Ensure this matches your filename logs.js
 
-import logs from './logs';
-
-export const reducers = combineReducers({ logs });
+export default combineReducers({ 
+    logs: logs 
+});
