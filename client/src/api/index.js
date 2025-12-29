@@ -1,6 +1,9 @@
 import axios from 'axios';
 
-const url = 'http://localhost:5000/logs';
+const isProd = process.env.NODE_ENV === 'production';
+const url = window.location.hostname === 'localhost' 
+  ? 'http://localhost:5000/logs' 
+  : '/logs';
 
 export const fetchLogs = () => axios.get(url);
 export const createLog = (newLog) => axios.post(url, newLog); 
