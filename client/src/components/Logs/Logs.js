@@ -17,7 +17,7 @@ const Logs = ({ setCurrentId }) => {
     return (
       <Paper className={classes.paper} style={{ padding: '20px', textAlign: 'center' }}>
         <Typography variant="h6">
-          No logs found. Start by creating one on the right! 📓
+          No logs found. Start by creating one on the right! <span role="img" aria-label="notebook">📓</span>
         </Typography>
       </Paper>
     );
